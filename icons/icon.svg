@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <rect x="8" y="8" width="112" height="112" rx="26" fill="#0f172a" stroke="#334155" stroke-width="3"/>
+  <!-- Left pill (Green Yes) -->
+  <rect x="23" y="32" width="36" height="64" rx="18" fill="#10b981"/>
+  <polyline points="33,64 40,71 50,54" fill="none" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Right pill (Rose No) -->
+  <rect x="69" y="32" width="36" height="64" rx="18" fill="#f43f5e"/>
+  <line x1="79" y1="56" x2="95" y2="72" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round"/>
+  <line x1="95" y1="56" x2="79" y2="72" stroke="#ffffff" stroke-width="4.5" stroke-linecap="round"/>
+</svg>

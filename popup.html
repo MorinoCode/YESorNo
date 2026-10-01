@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yes or No</title>
+  <link rel="icon" type="image/png" href="icons/icon16.png" />
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="header">
+      <div class="brand">
+        <span class="brand-badge">Y/N</span>
+        <h1 class="brand-title">YES OR NO</h1>
+      </div>
+    </header>
+
+    <!-- Mode Selector Tabs -->
+    <nav class="mode-tabs" role="tablist">
+      <button id="tab-direct" class="tab-btn active" role="tab" aria-selected="true" type="button">
+        Direct
+      </button>
+      <button id="tab-question" class="tab-btn" role="tab" aria-selected="false" type="button">
+        With Question
+      </button>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="content">
+      <!-- Mode 1: Direct Panel -->
+      <section id="panel-direct" class="mode-panel active" role="tabpanel">
+        <div id="direct-idle" class="panel-state">
+          <div class="idle-card">
+            <div class="idle-symbol">?</div>
+            <p class="idle-text">Need a quick answer?</p>
+          </div>
+          <button id="btn-direct-decide" class="action-btn primary-btn" type="button">
+            Decide
+          </button>
+        </div>
+
+        <div id="direct-result" class="panel-state hidden">
+          <div id="direct-badge" class="result-badge">
+            <div id="direct-icon" class="result-icon"></div>
+            <span id="direct-text" class="result-text">YES</span>
+          </div>
+          <div class="btn-group">
+            <button id="btn-direct-again" class="action-btn primary-btn" type="button">
+              Decide Again
+            </button>
+            <button id="btn-direct-reset" class="action-btn secondary-btn" type="button">
+              Reset
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mode 2: Question Panel -->
+      <section id="panel-question" class="mode-panel hidden" role="tabpanel">
+        <div id="question-idle" class="panel-state">
+          <div class="input-wrapper">
+            <label for="question-input" class="input-label">What is on your mind?</label>
+            <input
+              id="question-input"
+              class="text-input"
+              type="text"
+              placeholder="e.g. Should I buy this?"
+              maxlength="140"
+              autocomplete="off"
+              spellcheck="false"
+            />
+          </div>
+          <button id="btn-question-decide" class="action-btn primary-btn" type="button">
+            Decide
+          </button>
+        </div>
+
+        <div id="question-result" class="panel-state hidden">
+          <div class="question-quote-box">
+            <span class="quote-label">Question</span>
+            <p id="display-question" class="quote-text"></p>
+          </div>
+          <div id="question-badge" class="result-badge">
+            <div id="question-icon" class="result-icon"></div>
+            <span id="question-text" class="result-text">NO</span>
+          </div>
+          <div class="btn-group">
+            <button id="btn-question-again" class="action-btn primary-btn" type="button">
+              Decide Again
+            </button>
+            <button id="btn-question-new" class="action-btn secondary-btn" type="button">
+              New Question
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer / Keyboard Shortcut Hint -->
+    <footer class="footer">
+      <span class="hint-text">Press <kbd id="shortcut-key">Enter</kbd> to decide</span>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
